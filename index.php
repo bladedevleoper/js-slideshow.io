@@ -1,4 +1,4 @@
-<?php $title = 'Simple JS SlideShow"; ?>
+<?php $title = 'Simple JS SlideShow'; ?>
 
 <!DOCTYPE html>
 <html>
@@ -14,21 +14,21 @@
 <body>
     <div class="container">
 
-        <div id="image-display">
-        <img id="img-size" src="../javascript_practice/img/image1.jpg"/>
+        <div id="image-display" class="mx-auto">
+        <img id="img-size" class="selector" src="../js-slideshow.io/img/image1.jpg"/>
             <span id="left">&#10096;</span>
             <span id="right">&#10097;</span>
         </div>
 
         <div id="img-container">
-            <img id="img-size" src="../javascript_practice/img/image1.jpg" hidden/>
-            <img id="img-size" src="../javascript_practice/img/image2.jpg" />
-            <img id="img-size" src="../javascript_practice/img/image3.jpg" hidden/>
-            <img id="img-size" src="../javascript_practice/img/image4.jpg" hidden/>
+            <img id="img-size" src="../js-slideshow.io/img/image1.jpg" hidden/>
+            <img id="img-size" src="../js-slideshow.io/img/image2.jpg" hidden/>
+            <img id="img-size" src="../js-slideshow.io/img/image3.jpg" hidden/>
+            <img id="img-size" src="../js-slideshow.io/img/image4.jpg" hidden/>
         </div>
     
     </div>
     <!-- <script src="../javascript_practice/js/app.js"></script> -->
-    <script src="../javascript_practice/js/image-scroller.js"></script>
+    <script src="../js-slideshow.io/js/image-scroller.js"></script>
 </body>
 </html>
