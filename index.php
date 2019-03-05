@@ -20,6 +20,9 @@
 
         <div id="img-container">
             <img id="img-size" src="../javascript_practice/img/image1.jpg" hidden/>
+            <img id="img-size" src="../javascript_practice/img/image2.jpg" />
+            <img id="img-size" src="../javascript_practice/img/image3.jpg" hidden/>
+            <img id="img-size" src="../javascript_practice/img/image4.jpg" hidden/>
         </div>
     
     </div>
