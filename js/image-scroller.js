@@ -7,30 +7,46 @@ const allImages = document.querySelector('#img-container');
 let all = allImages.querySelectorAll('img');
 
 var imageContainer = document.querySelector('.selector');
+let counter = 0;
+var newImg = document.createElement('img');
+newImg.setAttribute('id', 'img-size');
 
-var getSrc = imageContainer.getAttribute('src');
+newImg.setAttribute('src', all[0].src);
+imgDisplay.appendChild(newImg);
 
-// let i = 0;
-//get the image to change with the src of setAttribute(src, all[i])
-//this will be placed inside of the event listener
-//i++;
+let imageSelected = all[counter];
 
-
-
-//insertImage.
-//get current array number
-//then store that in a variable
-//then swap the image in the image-display with the array pointer
 
 
 imgDisplay.addEventListener('click', (e) => {
 
-    if (e.target.tagName == 'SPAN' && e.target.id == 'right') {
-        console.log('right arrow being pressed');
+    if (counter > all.length) {
+        counter = 0;
+        newImg.setAttribute('src', all[0].src);
+
+    } else if (counter == 0 && e.target.id == 'left') {
+
+        counter--;
+        newImg.setAttribute('src', all[[all.length - 1]].src);
+
+    } else {
+
+        if (e.target.tagName == 'SPAN' && e.target.id == 'right') {
+            counter++;
+            newImg.setAttribute('src', all[counter].src);
+            
+        }
+
+        if (e.target.tagName == 'SPAN' && e.target.id == 'left') {
+            
+            counter--;
+            newImg.setAttribute('src', all[counter].src);
+        
+        }
     }
 
-    if (e.target.tagName == 'SPAN' && e.target.id == 'left') {
-        console.log('left arrow being pressed');
-    }
+    
 
 });
+
+
