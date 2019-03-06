@@ -65,3 +65,16 @@
         top:11%;
     }
 }
+
+@media(min-width: 1140px) {
+
+    #right{
+        right:37.5%;
+        top: 11%;
+    }
+
+    #left{
+        left:37.5%;
+        top:11%;
+    }
+}
