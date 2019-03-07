@@ -1,5 +1,4 @@
 const imgDisplay = document.querySelector('#image-display');
-// const rightArrow = document.querySelector('#right');
 
 const allImages = document.querySelector('#img-container');
 
@@ -20,33 +19,34 @@ let imageSelected = all[counter];
 
 imgDisplay.addEventListener('click', (e) => {
 
-    if (counter > all.length) {
-        counter = 0;
+    if (counter == all.length - 1 && e.target.id == "right") {
+        
         newImg.setAttribute('src', all[0].src);
+        counter = 0;
 
     } else if (counter == 0 && e.target.id == 'left') {
-
-        counter--;
-        newImg.setAttribute('src', all[[all.length - 1]].src);
-
+       
+        counter = all.length - 1;
+        newImg.setAttribute('src', all[counter].src);
+      
     } else {
 
         if (e.target.tagName == 'SPAN' && e.target.id == 'right') {
             counter++;
+           
             newImg.setAttribute('src', all[counter].src);
-            
         }
 
         if (e.target.tagName == 'SPAN' && e.target.id == 'left') {
             
             counter--;
             newImg.setAttribute('src', all[counter].src);
-        
+
         }
     }
 
     
-
+ 
 });
 
 
