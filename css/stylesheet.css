@@ -1,10 +1,23 @@
+
+:root{
+    --backColour: #f4c842;
+}
+
 #image-display{
     width:500px;
     height: 100%;
-    border: 3px solid orange;
+    border: 3px solid var(--backColour);
     z-index: -1;
     padding:3;
     margin:0;
+    box-shadow:10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes image-slide{
+   
+    25%  {width: 25%;}
+    50%  {width: 75%;}
+    100% {width: 100%;}
 }
 
 #img-size{
@@ -12,6 +25,11 @@
     width:100%;
     z-index: -1;
     margin:0;
+    position: relative;
+    /* transition:width 2s, height 2s, transform 2s;
+    animation-name: image-slide;
+    animation-duration: 4s; */
+    
 }
 
 /* left arrow */
